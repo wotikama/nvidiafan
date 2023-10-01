@@ -1,6 +1,6 @@
 #  Welcome
 
-Im not an nvidia fan, by fan I mean -> https://i.imgur.com/REGlUue.gif. This works [tested only] on wayland with Hyprland. And if you dont want to idle at 60ºC and burn you house down you are in the right place.
+Im not an nvidia fan, by fan I mean -> https://i.imgur.com/REGlUue.gif. And if you dont want to idle at 60ºC and burn you house down you are in the right place.
 Dependancies:
 ```
 sudo pacman -S nvidia-settings bash xhost
