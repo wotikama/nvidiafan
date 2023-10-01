@@ -38,7 +38,11 @@ WantedBy=multi-user.target
 
 # Configuration:
 open nvidiafan.sh 
-X means temperature, you can add as many intervals as you like and set also the speed to create the most perfect, beatifully engineered curve to cool your gpu in a cool way.
+
+### X = temperature 
+in ºC (Celsius) make sure thats the unit in which nvidia-smi outputs, else you will need to convert all the values
+
+you can add as many intervals as you like and set also the speed to create the most perfect, beatifully engineered curve to cool your gpu in a cool way.
 
 The script will check gpu temp every 10 seconds, to modify change
 ```
