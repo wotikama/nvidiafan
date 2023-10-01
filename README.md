@@ -13,11 +13,15 @@ Please use nvidia propietary drivers.
 
 # Installation:
 clone repository
-git clone https://github.com/wotikama/nvidiafan/ 
+```
+git clone https://github.com/wotikama/nvidiafan/
+```
 move nvidiafan.service to /etc/systemd/system/
 give it privilages
-[[[# chmod 644 /etc/systemd/system/nvidiafan.service
+```
+# chmod 644 /etc/systemd/system/nvidiafan.service
 $ systemctl enable nvidiafan.service]]]
+```
 
 nvim,nano, vim or whatever into nvidiafan.service
 and set path under [Service]
