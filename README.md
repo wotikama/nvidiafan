@@ -39,6 +39,7 @@ WantedBy=multi-user.target
 # Configuration:
 open nvidiafan.sh 
 
+### CHANGE "j" for your sudo password
 ### X means temperature 
 Degrees are in ºC (Celsius) make sure thats the unit in which nvidia-smi outputs, else you will need to convert all the values
 
