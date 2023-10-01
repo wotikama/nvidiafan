@@ -21,7 +21,7 @@ $ systemctl enable nvidiafan.service]]]
 
 nvim,nano, vim or whatever into nvidiafan.service
 and set path under [Service]
-'''
+```
 [Unit]
 Description=Nvidia fan control systemd service.
 
@@ -31,7 +31,7 @@ ExecStart=/bin/bash /home/wotikama/nvidiafan.sh
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 
 Configuration:
 open nvidiafan.sh 
