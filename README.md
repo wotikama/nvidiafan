@@ -5,7 +5,7 @@ Dependancies:
 ```
 sudo pacman -S nvidia-settings bash xhost
 ```
-Please use nvidia propietary drivers.
+I use nvidia propietary drivers.
 
 # Installation:
 clone repository
