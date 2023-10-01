@@ -24,7 +24,7 @@ $ systemctl enable nvidiafan.service]]]
 ```
 
 nvim,nano, vim or whatever into nvidiafan.service
-and set path under [Service]
+and set path under [Service]. Do not change shell as it may not work
 ```
 [Unit]
 Description=Nvidia fan control systemd service.
