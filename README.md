@@ -12,7 +12,10 @@ clone repository
 ```
 git clone https://github.com/wotikama/nvidiafan/
 ```
-move nvidifan.sh to a safe place (I use ~/)
+move nvidifan.sh to a safe place (I use ~/) and make it executable
+```
+chmod +x file
+```
 
 nvim,nano, vim or whatever into nvidiafan.service
 and set path under [Service]. Do not change shell as it may not work
