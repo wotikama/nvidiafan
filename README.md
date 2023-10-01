@@ -31,7 +31,7 @@ move nvidiafan.service to /etc/systemd/system/
 give and it privilages then enable/start
 ```
 # chmod 644 /etc/systemd/system/nvidiafan.service
-$ systemctl enable nvidiafan.service]]]
+$ systemctl enable nvidiafan.service
 ```
 you may want to reboot now
 
