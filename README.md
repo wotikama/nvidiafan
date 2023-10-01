@@ -14,7 +14,7 @@ git clone https://github.com/wotikama/nvidiafan/
 ```
 move nvidifan.sh to a safe place (I use ~/) and make it executable
 ```
-chmod +x file
+chmod +x nvidiafan.sh
 ```
 
 nvim,nano, vim or whatever into nvidiafan.service
