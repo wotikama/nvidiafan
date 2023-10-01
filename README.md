@@ -17,35 +17,18 @@ move nvidifan.sh to a safe place (I use ~/) and make it executable
 chmod +x nvidiafan.sh
 ```
 
-nvim,nano, vim or whatever into nvidiafan.service
-and set path under [Service]. Do not change shell as it may not work
-```
-[Unit]
-Description=Nvidia fan control systemd service.
-
-[Service]
-Type=simple
-ExecStart=/bin/bash /home/wotikama/nvidiafan.sh
-
-[Install]
-WantedBy=multi-user.target
-```
-move nvidiafan.service to /etc/systemd/system/
-give and it privilages then enable/start
-```
-# chmod 644 /etc/systemd/system/nvidiafan.service
-$ systemctl enable nvidiafan.service
-```
-you may want to reboot now
-
+open hyprland.conf and add
+´´´
+exec-once = bash /(PATH TO FILE)/nvidiafan.sh
+´´´
 # Configuration:
-open nvidiafan.sh 
-
+nivm ,nano, vim into nvidiafan.sh 
+### change password="j" for your sudo paswword
 ### X means temperature 
 Degrees are in ºC (Celsius) make sure thats the unit in which nvidia-smi outputs, else you will need to convert all the values.
-you can add as many intervals as you like and set also the speed to create the most perfect, beatifully engineered curve to cool your gpu the cool way.
+you can add as many intervals as you like and set also the fan speed to create the most perfect, beatifully engineered curve to cool your gpu the cool way.
 
 The script will check gpu temp every 10 seconds, to modify change
 ```
-sleep 10
+sleep 'seconds'
 ```
