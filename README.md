@@ -1,4 +1,5 @@
-# IMPORTANT: THIS IS FOR SYSTEMD
+
+### IMPORTANT: THIS IS FOR SYSTEMD
 
 Im not an nvidia fan, it means https://i.imgur.com/REGlUue.gif. This works [tested only] on wayland with Hyprland. And if you dont want to idle at 60ºC and burn you house down you are in the right place.
 Dependancies:
@@ -37,6 +38,6 @@ ExecStart=/bin/bash /home/wotikama/nvidiafan.sh
 WantedBy=multi-user.target
 ```
 
-Configuration:
+# Configuration:
 open nvidiafan.sh 
 X means temperature, you can add as many intervals as you like and set also the speed to create the most perfect, beatifully engineered curve to cool your gpu in a cool way.
