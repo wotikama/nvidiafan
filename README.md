@@ -23,9 +23,9 @@ chmod +x nvidiafan.sh
 ```
 
 open hyprland.conf and add
-´´´
+```
 exec-once = bash /(PATH TO FILE)/nvidiafan.sh
-´´´
+```
 # Configuration:
 nivm ,nano, vim into nvidiafan.sh 
 ### change password="j" for your sudo paswword
