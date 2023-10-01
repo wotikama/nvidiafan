@@ -17,7 +17,7 @@ clone repository
 git clone https://github.com/wotikama/nvidiafan/
 ```
 move nvidiafan.service to /etc/systemd/system/
-give it privilages
+give and it privilages
 ```
 # chmod 644 /etc/systemd/system/nvidiafan.service
 $ systemctl enable nvidiafan.service]]]
