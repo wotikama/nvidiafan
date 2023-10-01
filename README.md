@@ -35,5 +35,5 @@ you can add as many intervals as you like and set also the fan speed to create t
 
 The script will check gpu temp every 10 seconds, to modify change
 ```
-sleep 'seconds'
+sleep seconds
 ```
