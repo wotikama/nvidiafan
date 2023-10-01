@@ -28,7 +28,7 @@ exec-once = bash /(PATH TO FILE)/nvidiafan.sh
 ```
 # Configuration:
 nivm ,nano, vim into nvidiafan.sh 
-### change password="j" for your sudo paswword
+### change password="j" for your sudo password
 ### X means temperature 
 Degrees are in ºC (Celsius) make sure thats the unit in which nvidia-smi outputs, else you will need to convert all the values.
 you can add as many intervals as you like and set also the fan speed to create the most perfect, beatifully engineered curve to cool your gpu the cool way.
