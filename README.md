@@ -24,7 +24,7 @@ chmod +x nvidiafan.sh
 
 open hyprland.conf and add
 ```
-exec-once = bash /(PATH TO FILE)/nvidiafan.sh
+exec-once = bash /PATH/TO/FILE/nvidiafan.sh
 ```
 # Configuration:
 nivm ,nano, vim into nvidiafan.sh 
