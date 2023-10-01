@@ -5,7 +5,12 @@ Dependancies:
 ```
 sudo pacman -S nvidia-settings bash xhost
 ```
-I use nvidia propietary drivers.
+I use 
+Archlinux
+
+Hyprland
+
+nvidia propietary drivers.
 
 # Installation:
 clone repository
