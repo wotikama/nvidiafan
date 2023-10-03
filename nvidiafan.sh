@@ -1,38 +1,34 @@
 #!/bin/env bash
 # Change "j" for your sudo password
-
 password="j"
 
+# Function
+setfan() {
+  xhost si:localuser:root
+  echo $password | sudo -S /usr/bin/nvidia-settings -a "*:1[gpu:0]/GPUFanControlState=1" -a "*:1[fan-0]/GPUTargetFanSpeed=$1" -a "*:1[fan-1]/GPUTargetFanSpeed=$1"
+  xhost -si:localuser:root
+}
+
+# Change 'setfan' parameter for speed % and 'X' intervals for temperature boundaries
 for(( ; ; ))
 do
 X=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
 if ((0<=X && X<=35))
 then
-   xhost si:localuser:root  
-  echo $password | sudo -S /usr/bin/nvidia-settings -a *:1[gpu:0]/GPUFanControlState=1 -a *:1[fan-0]/GPUTargetFanSpeed=40                   
-     xhost -si:localuser:root
+  setfan 40
 elif ((36<=X && X<=50))
 then
-  xhost si:localuser:root  
-  echo $password | sudo -S /usr/bin/nvidia-settings -a *:1[gpu:0]/GPUFanControlState=1 -a *:1[fan-0]/GPUTargetFanSpeed=50                   
-     xhost -si:localuser:root
-elif ((51<=X && X<=65))
+  setfan 55
+elif ((51<=X && X<=63))
 then
-  xhost si:localuser:root  
-  echo $password | sudo -S /usr/bin/nvidia-settings -a *:1[gpu:0]/GPUFanControlState=1 -a *:1[fan-0]/GPUTargetFanSpeed=70                   
-     xhost -si:localuser:root
-elif ((66<=X && X<=70))
+  setfan 70
+elif ((64<=X && X<=70))
 then
-  xhost si:localuser:root  
-  echo $password | sudo -S /usr/bin/nvidia-settings -a *:1[gpu:0]/GPUFanControlState=1 -a *:1[fan-0]/GPUTargetFanSpeed=80                   
-     xhost -si:localuser:root
+  setfan 85
 elif ((71<=X && X<=100))
 then
-  xhost si:localuser:root  
-  echo $password | sudo -S /usr/bin/nvidia-settings -a *:1[gpu:0]/GPUFanControlState=1 -a *:1[fan-0]/GPUTargetFanSpeed=100                   
-     xhost -si:localuser:root
-fi 
+  setfan 100
+fi
 
 sleep 10
-
 done
