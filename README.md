@@ -1,6 +1,6 @@
 #  Welcome
 
-Im not an nvidia fan, by fan I mean -> https://i.imgur.com/REGlUue.gif. And if you dont want to idle at 60ºC and burn you house down you are in the right place.
+Stop idling at 60ºC.
 Dependencies:
 ```
 sudo pacman -S --needed nvidia-settings bash xhost
