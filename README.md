@@ -1,6 +1,7 @@
 #  Welcome
 
-Stop idling at 60ºC.
+You Should Stop Idling at 60ºC NOW!
+
 Dependencies:
 ```
 sudo pacman -S --needed nvidia-settings bash xhost
