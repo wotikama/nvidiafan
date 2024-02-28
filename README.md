@@ -9,11 +9,11 @@ Dependencies:
 # Installation:
 clone repository
 ```
-git clone https://github.com/wotikama/nvidiafan/
+$ git clone https://github.com/wotikama/nvidiafan/
 ```
 move nvidifan.sh to a safe place (I use ~/) and make it executable
 ```
-chmod +x nvidiafan.sh
+$ chmod +x nvidiafan.sh
 ```
 
 open hyprland.conf and add
