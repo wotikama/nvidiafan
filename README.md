@@ -1,5 +1,5 @@
 #  Welcome
-Bash script to set custom fan speeds depending on the temperature. I use arch btw
+Nvidia fan control for wayland. I use arch btw
 
 Dependencies:
 ```
