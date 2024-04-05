@@ -3,7 +3,7 @@ Nvidia fan control for wayland. I use arch btw
 
 Dependencies:
 ```
-# pacman -S --needed nvidia-settings bash xhost
+# pacman -S --needed nvidia-settings bash xorg-xhost
 ```
 
 # Installation:
