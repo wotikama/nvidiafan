@@ -1,5 +1,6 @@
 #  Welcome
-Nvidia fan control for wayland. I use arch btw
+Nvidia fan control for wayland. I use arch btw. 
+
 edit: using now dwl with no problems
 
 Dependencies:
