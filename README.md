@@ -6,6 +6,12 @@ Dependencies:
 # pacman -S --needed nvidia-settings bash xorg-xhost
 ```
 
+# ALlow sudo nopasswd (WON'T WORK OTHERWISE!)
+As suggested -to not store sudo passwordd in plain text-  add the following at the end of sudoers:
+first edit sudoers:
+```
+user ALL=(ALL) NOPASSWD: /usr/bin/nvidia-settings *
+```
 # Installation:
 clone repository
 ```
@@ -22,7 +28,6 @@ exec-once = bash /PATH/TO/FILE/nvidiafan.sh
 ```
 # Configuration:
 nivm ,nano, vim into nvidiafan.sh 
-### change password="j" for your sudo password
 ### X Means temperature in °C
 --you can add as many intervals as you like and set also the fan speed.
 
