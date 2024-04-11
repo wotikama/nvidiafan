@@ -6,7 +6,7 @@ Dependencies:
 # pacman -S --needed nvidia-settings bash xorg-xhost
 ```
 
-# ALlow sudo nopasswd (WON'T WORK OTHERWISE!)
+# Allow sudo nopasswd (WON'T WORK OTHERWISE!)
 As suggested -to not store sudo passwordd in plain text-  add the following at the end of sudoers:
 first edit sudoers:
 ```
