@@ -8,7 +8,6 @@ Dependencies:
 
 # Allow sudo nopasswd (WON'T WORK OTHERWISE!)
 As suggested -to not store sudo passwordd in plain text-  add the following at the end of sudoers:
-first edit sudoers:
 ```
 user ALL=(ALL) NOPASSWD: /usr/bin/nvidia-settings *
 ```
