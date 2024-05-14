@@ -22,7 +22,7 @@ move nvidifan.sh to a safe place (I use ~/) and make it executable
 ```
 $ chmod +x nvidiafan.sh
 ```
-
+-launch on startup. Example:
 open hyprland.conf and add
 ```
 exec-once = bash /PATH/TO/FILE/nvidiafan.sh
