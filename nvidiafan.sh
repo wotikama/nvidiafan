@@ -1,32 +1,38 @@
-#!/bin/env bash
+#!/bin/bash -e
 
-# Function
+interval=5  # Time between each temperature check (in seconds)
+
+fan_min=42  # Minimum fan speed
+fan_max=60  # Maximum fan speed
+temp_min=40 # Minimum temperature threshold
+temp_max=90 # Maximum temperature threshold
+
+
 setfan() {
-  xhost si:localuser:root
-  sudo /usr/bin/nvidia-settings -a "*:1[gpu:0]/GPUFanControlState=1" -a "*:1[fan-0]/GPUTargetFanSpeed=$1" -a "*:1[fan-1]/GPUTargetFanSpeed=$1"
-  xhost -si:localuser:root
+  {
+    xhost si:localuser:root
+    # TODO: detect and handle multiple fans
+    sudo /usr/bin/nvidia-settings -a "*:1[gpu:0]/GPUFanControlState=1" -a "*:1[fan-0]/GPUTargetFanSpeed=$1" -a "*:1[fan-1]/GPUTargetFanSpeed=$1"
+    xhost -si:localuser:root
+  } > /dev/null
 }
 
-# Change 'setfan' parameter for speed % and 'X' intervals for temperature boundaries
+
 for(( ; ; ))
 do
-X=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
-if ((0<=X && X<=35))
-then
-  setfan 40
-elif ((36<=X && X<=50))
-then
-  setfan 55
-elif ((51<=X && X<=63))
-then
-  setfan 70
-elif ((64<=X && X<=70))
-then
-  setfan 85
-elif ((71<=X && X<=100))
-then
-  setfan 100
-fi
+  temp=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
 
-sleep 10
+  if [[ $temp < $temp_min ]]
+  then
+      fan_speed=$fan_min
+  elif [[ $temp > $temp_max ]];
+  then
+      fan_speed=100
+  else
+      fan_speed=$(echo "$fan_min + (($temp - $temp_min) * ($fan_max - $fan_min)) / ($temp_max - $temp_min)" | bc)
+  fi
+
+  setfan $fan_speed
+
+  sleep $interval
 done
