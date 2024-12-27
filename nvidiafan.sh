@@ -22,10 +22,10 @@ for(( ; ; ))
 do
   temp=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
 
-  if [[ $temp < $temp_min ]]
+  if (( $temp < $temp_min ))
   then
       fan_speed=$fan_min
-  elif [[ $temp > $temp_max ]];
+  elif (( $temp > $temp_max ));
   then
       fan_speed=100
   else
