@@ -28,11 +28,4 @@ open hyprland.conf and add
 exec-once = bash /PATH/TO/FILE/nvidiafan.sh
 ```
 # Configuration:
-nivm ,nano, vim into nvidiafan.sh 
-### X Means temperature in °C
---you can add as many intervals as you like and set also the fan speed.
-
-The script will check gpu temp every ~10 seconds, to modify change
-```
-sleep seconds
-```
+edit nvidiafan.sh 
